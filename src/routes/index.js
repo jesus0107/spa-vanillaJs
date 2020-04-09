@@ -1,7 +1,7 @@
-import { Header } from '../templates/Header';
-import { Home } from '../pages/Home';
-import { Character } from '../pages/Character';
-import { Error404 } from '../pages/Error404';
+import Header from '../templates/Header';
+import Home from '../pages/Home';
+import Character from '../pages/Character';
+import Error404 from '../pages/Error404';
 
 /**
  * vamos a empezar a trabajar lo que necesita nuestra aplicacion para manejar las rutas
@@ -30,7 +30,6 @@ const routes = {
     '/contact': 'Contact',
 }
 
-debugger
 const router = async () => {
     const header =null || document.getElementById('header')
     const content =null || document.getElementById('content')
