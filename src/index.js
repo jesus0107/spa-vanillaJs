@@ -4,6 +4,8 @@
  * manejaremos un manejador de eventos que escuchara si la carga de lapagina a sucedido,entonces cuando todo este cargado ejecutaremos el codigo
  * 
  * primer parametro evento load, despues le pasaremos nuestra importacion que contiene todo nuestro codigo 
+ * 
+ * aqui ejeturameos otro addevenlistener que escuchara el evento haschchange que se ejecuta cuando la url ha cambiado.
  */
 
 import router from '../src/routes'

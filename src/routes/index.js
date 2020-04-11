@@ -28,6 +28,15 @@ import resolveRoutes from '../utils/resolveRoutes';
  * 
  * 
  * implementaremos las utilidades
+ * 
+ * almacenaremos en variables las utilidades en este caso la uncionde getHash y la de resolveroutes en la que haremos usu del await por que pasaremos por parametro el getHash y no sabemos cuanto se puede demorar en devolver la ruta
+ * 
+ * cremos una variable llamada render que contendra el valor de las ruta y en la que haremos una vaidacion y compararemos las rutas contenidas en routes con las rutas almacenadas en route 
+ * si es igual decimos que se muestre este contenido almacenado en routes[route]
+ * y si no que nos devuelva el template del error 404
+ * 
+ * finalmente esto lo tenemos que renderizar en el html en la seccion con el id de content
+ * para esto hacemos innehtml a content y le pasamos render 
  */
 const routes = {
     '/': Home,

@@ -8,17 +8,25 @@
  * retornaremos view
  * 
  * exportaremos este archivo para identificar si este archivo puede reutilizado en otros archvos js
- * */
+ * importaremos la funcion que contiene el llamado a la api*/
 
-const Home = () => {
+import getData from '../utils/getData';
+
+
+const Home = async () => {
+
+    const character = await getData();
+
     const view = /*html*/`
         <div class="Characters">
-            <article class="Character-item">
-                <a href="#/1/">
-                    <img src="image" alt="name">
-                    <h2>name</h2>
-                </a>
-            </article>
+            ${character.results.map((character) =>
+                `<article class="Character-item">
+                    <a href="#/${character.id}/">
+                        <img src="${character.image}" alt="${character.name}">
+                        <h2>${character.name}</h2>
+                    </a>
+                </article>`
+            ).join('')}
         </div>
     `;
     return view;
